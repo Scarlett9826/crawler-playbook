@@ -28,6 +28,11 @@
 - python -m pipeline.kol.extract
 - python -m pipeline.kol.aggregate
 
+## Credentials and accounts
+- Xiaohongshu: use a secondary account; main accounts can be rate-limited.
+- X: collect cookies with the "Get your cookies" Chrome extension; never ask for passwords.
+- Never commit .env, cookies, browser profiles, or raw user data.
+
 ## Invariants
 - Never commit .env, cookies, browser profiles, raw user data.
 - Anonymize only the configured brand and LLM proxy; keep competitors and platforms.

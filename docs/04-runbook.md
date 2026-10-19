@@ -11,6 +11,12 @@ cp config/project.example.yaml config/project.yaml
 .venv/bin/python tools/preflight.py
 ```
 
+## 0.1 代采凭据（远程协作）
+
+- **X**：让对方在 Chrome 安装 **Get your cookies** 扩展，登录 x.com 后导出 Cookie，粘贴给你；你填入 `.env` 的 `X_AUTH_TOKEN` / `X_CT0_TOKEN`。不要索要账号密码。
+- **小红书**：让对方用**小号**扫码登录，避免主账号被限流或权限受限。
+- 拿到 Cookie 后不要提交、不要截图外发；用完让对方退出登录。
+
 ## 1. 采集
 
 ### 小红书 / 抖音 / B站 / 知乎

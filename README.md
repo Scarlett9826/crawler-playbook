@@ -41,6 +41,8 @@ cp config/project.example.yaml config/project.yaml
 .venv/bin/python tools/preflight.py
 ```
 
+> **账号与凭据**：小红书建议用小号登录，避免主账号被限流；X 只收 Cookie，不索要密码，让对方用 Chrome 扩展 **Get your cookies** 导出后粘贴给部署者。
+
 最小闭环：
 
 ```bash

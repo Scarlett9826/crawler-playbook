@@ -16,6 +16,12 @@ leak credentials or project-identifying terms.
 4. **Do not fabricate a comparison.** A video without a self-tested, same-task,
    multi-model comparison must not produce a showcase.
 5. **Never edit `vendors/`.** It is a third-party submodule with its own license.
+6. **Account hygiene.** Use a secondary account for Xiaohongshu (and preferably
+   Douyin/Bilibili/Zhihu). New-device logins and high request rates can get the
+   main account rate-limited.
+7. **X credentials.** Collect cookies with the **Get your cookies** Chrome
+   extension: log in to x.com, export the site cookies, and paste them to the
+   operator. Never ask for or handle an account password.
 
 ## 1. First run
 
@@ -34,7 +40,7 @@ If preflight fails, fix the environment before crawling:
 | `ffmpeg` missing | install ffmpeg; video transcription will fail without it |
 | `yt-dlp` missing | `pip install yt-dlp` |
 | LLM keys missing | fill `LLM_BASE_URL` / `LLM_API_KEY` / `LLM_MODEL` in `.env` |
-| X cookies missing | only needed for the X collector |
+| X cookies missing | only for the X collector; ask the operator to export cookies with the **Get your cookies** extension |
 
 ## 2. Decision tree: which collector?
 
