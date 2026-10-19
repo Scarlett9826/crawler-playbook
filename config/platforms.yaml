@@ -1,0 +1,147 @@
+# Machine-readable platform matrix.
+# An agent should read this file first when deciding "how do I crawl platform X".
+#
+# Fields:
+#   label            human name
+#   adapter          which collector module handles it
+#   platform_code    code used by MediaCrawler
+#   kinds            what can be collected
+#   auth             login method
+#   search/detail    canonical commands (run from vendors/MediaCrawler unless adapter=custom)
+#   outputs          glob for raw output
+#   completeness     how to judge whether the crawl is complete
+#   gotchas          known failure modes
+
+version: 1
+
+platforms:
+  xiaohongshu:
+    label: 小红书
+    adapter: media_crawler
+    platform_code: xhs
+    kinds: [post, comment]
+    auth: qrcode
+    search: "uv run main.py --platform xhs --lt qrcode --type search"
+    detail: "uv run main.py --platform xhs --lt qrcode --type detail"
+    outputs: "data/raw/xiaohongshu/**/*.jsonl"
+    completeness:
+      comment_counter: comment_count
+      detail_refill: true
+      target_comment_ratio: 0.6
+    gotchas:
+      - "xsec_token 随搜索结果下发，详情页必须带 xsec_source"
+      - "未登录时详情接口返回空，先扫码"
+      - "评论需详情模式，搜索结果页评论很少"
+
+  douyin:
+    label: 抖音
+    adapter: media_crawler
+    platform_code: dy
+    kinds: [post, comment]
+    auth: qrcode
+    search: "uv run main.py --platform dy --lt qrcode --type search"
+    detail: "uv run main.py --platform dy --lt qrcode --type detail"
+    outputs: "data/raw/douyin/**/*.jsonl"
+    completeness:
+      comment_counter: comment_count
+      detail_refill: true
+      target_comment_ratio: 0.5
+    gotchas:
+      - "扫码后可能出现手机号验证，需人工完成"
+      - "视频直链有时效，转写要尽快"
+
+  bilibili:
+    label: B站
+    adapter: media_crawler
+    platform_code: bili
+    kinds: [post, comment]
+    auth: qrcode
+    search: "uv run main.py --platform bili --lt qrcode --type search"
+    detail: "uv run main.py --platform bili --lt qrcode --type detail"
+    outputs: "data/raw/bilibili/**/*.jsonl"
+    completeness:
+      comment_counter: video_comment
+      detail_refill: true
+      target_comment_ratio: 0.6
+    gotchas:
+      - "一级评论和二级评论是两套接口"
+      - "BV 号与 av 号需要互转时交给 MediaCrawler"
+
+  zhihu:
+    label: 知乎
+    adapter: media_crawler
+    platform_code: zhihu
+    kinds: [post, comment]
+    auth: qrcode
+    search: "uv run main.py --platform zhihu --lt qrcode --type search"
+    detail: "uv run main.py --platform zhihu --lt qrcode --type detail"
+    outputs: "data/raw/zhihu/**/*.jsonl"
+    completeness:
+      comment_counter: comment_count
+      detail_refill: false
+      target_comment_ratio: 0.4
+    gotchas:
+      - "回答正文与评论结构不同"
+      - "搜索页排序与登录态有关"
+
+  weibo:
+    label: 微博
+    adapter: weibo
+    kinds: [post, comment]
+    auth: cookie_or_guest
+    command: "python -m pipeline.collect.weibo.crawl"
+    outputs: "data/raw/weibo/**/*.jsonl"
+    completeness:
+      comment_counter: comments
+      detail_refill: true
+      target_comment_ratio: 0.5
+    gotchas:
+      - "m.weibo.cn 的 getIndex 与 comments/hotflow 是两个接口"
+      - "相对时间（x分钟前）无法直接解析，需结合抓取时间"
+
+  wechat:
+    label: 微信公众号
+    adapter: wechat
+    kinds: [article]
+    auth: browser_profile
+    command: "python -m pipeline.collect.wechat.crawl"
+    outputs: "data/raw/wechat/**/*.jsonl"
+    completeness:
+      article_body_required: true
+      has_comments: false
+    gotchas:
+      - "搜狗微信有验证码，需人工过"
+      - "文章链接是搜狗跳转，必须在真实浏览器里跟随"
+      - "无评论区，只有正文"
+
+  x:
+    label: X / Twitter
+    adapter: x
+    kinds: [tweet, comment, video]
+    auth: cookies
+    command: "python -m pipeline.collect.x.search && python -m pipeline.collect.x.threads"
+    outputs: "data/raw/x/**/*.jsonl"
+    completeness:
+      comment_counter: reply_count
+      detail_refill: true
+      target_comment_ratio: 0.5
+    gotchas:
+      - "需要 auth_token + ct0"
+      - "SearchTimeline / TweetDetail 是内部 GraphQL 接口，字段会变"
+      - "视频 CDN 地址会过期，下载时用推文 URL 让 yt-dlp 现解析"
+
+  youtube:
+    label: YouTube
+    adapter: youtube
+    kinds: [video, comment]
+    auth: none
+    command: "python -m pipeline.collect.youtube.run"
+    outputs: "data/raw/youtube/**/*.jsonl"
+    completeness:
+      comment_counter: comment_count
+      detail_refill: false
+      target_comment_ratio: 0.3
+    gotchas:
+      - "云 IP 容易被 ban，必要时用住宅代理"
+      - "年龄/地区限制视频会失败，记录并跳过"
+      - "自动字幕可能无标点，质量差时回退 Whisper"

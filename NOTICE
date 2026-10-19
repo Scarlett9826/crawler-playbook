@@ -1,0 +1,51 @@
+# Third-party notices
+
+This repository's own code is licensed under the MIT License (see LICENSE).
+
+It depends on or integrates with the following third-party projects. Their
+licenses apply to their own code; this repository does not relicense them.
+
+## MediaCrawler (git submodule, vendors/MediaCrawler)
+
+- Upstream: https://github.com/NanmiCoder/MediaCrawler
+- License: NON-COMMERCIAL LEARNING LICENSE 1.1
+- Usage here: invoked as an external tool/submodule for research and learning.
+- You must comply with its license separately. Do not assume this repository's
+  MIT license covers MediaCrawler.
+
+## yt-dlp
+
+- License: Unlicense (source distribution). Prebuilt binaries may bundle
+  GPLv3+ components; see upstream THIRD_PARTY_LICENSES.
+- Usage: external CLI for metadata and media download.
+
+## youtube-transcript-api
+
+- License: MIT
+- Usage: fetch YouTube subtitles before falling back to ASR.
+
+## youtube-comment-downloader
+
+- License: MIT
+- Usage: fetch YouTube comments without an API key.
+
+## faster-whisper
+
+- License: MIT
+- Usage: local audio transcription fallback.
+
+## Playwright
+
+- License: Apache-2.0
+- Usage: browser automation for platforms that require a logged-in session.
+
+## ffmpeg
+
+- License: depends on the build (LGPL/GPL)
+- Usage: audio extraction / transcoding.
+
+## Note on platform terms
+
+Crawling is subject to each platform's Terms of Service and robots rules.
+This project is intended for research and learning. You are responsible for
+ensuring your use complies with applicable law and platform terms.

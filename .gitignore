@@ -1,0 +1,36 @@
+# secrets
+.env
+.env.*
+!.env.example
+config/config.json
+cookies*.json
+*.token
+
+# local browser profiles / login state
+browser_data/
+wechat_profile/
+.profiles/
+
+# python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# crawled data (large / private)
+data/
+
+# media
+*.m4a
+*.mp4
+*.wav
+*.webm
+*.mkv
+
+# logs
+*.log
+logs/
+
+# os
+.DS_Store

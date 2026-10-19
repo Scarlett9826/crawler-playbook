@@ -1,0 +1,77 @@
+# Synthetic demo project. Safe to commit; no real data.
+project:
+  name: demo
+  brand: "Brand A"
+  product: "Model X"
+  spokespeople: ["负责人 A"]
+  timezone: "Asia/Shanghai"
+  date_window:
+    since: "2026-09-20"
+    until: "2026-10-15"
+
+keywords:
+  core: ["Model X", "Brand A"]
+  include: []
+  exclude: ["路由器"]
+  queries:
+    x: ["Model X", "Brand A Model X"]
+    weibo: ["Model X"]
+    wechat: ["Model X"]
+    media_crawler: "Model X,Model X Pro"
+    youtube:
+      - "Model X"
+      - "Brand A Model X"
+
+platforms:
+  xiaohongshu: {enabled: true, max_notes: 50, max_comments: 300}
+  douyin:      {enabled: true, max_notes: 50, max_comments: 300}
+  bilibili:    {enabled: true, max_notes: 50, max_comments: 400}
+  zhihu:       {enabled: true, max_notes: 30, max_comments: 150}
+  weibo:       {enabled: true, max_posts: 100, max_comments: 300}
+  wechat:      {enabled: true, max_articles_per_query: 10}
+  x:           {enabled: true, max_anchors: 45, max_scrolls: 14}
+  youtube:     {enabled: true, max_videos: 20, max_comments: 200}
+
+crawl:
+  incremental: true
+  overlap_hours: 6
+  request_interval_s: 2.0
+  retries: 3
+  max_pages: 20
+  state_file: "data/state/crawl_state.json"
+  targets:
+    min_posts_per_platform: 1
+    min_comment_ratio: 0.5
+    max_staleness_hours: 100000
+    max_duplicate_ratio: 0.2
+    max_unknown_time_ratio: 0.2
+
+llm:
+  base_url: "https://api.example.com/v1"
+  model: "your-model"
+  api_key_env: "LLM_API_KEY"
+  temperature: 0
+  concurrency: 3
+  max_tokens: 8000
+
+video:
+  transcript: subtitle_first
+  languages: [zh, en]
+  keep_media: false
+  comments_limit: 200
+  frame_text:
+    enabled: false
+    provider: noop
+  routing:
+    min_models_for_showcase: 2
+    require_own_test: true
+    require_same_task: true
+    manual_review_on_uncertain: true
+
+files:
+  taxonomy: "config/taxonomy.example.yaml"
+  models: "config/models.yaml"
+  kol: "config/kol.yaml"
+  dimensions: "config/video_dimensions.yaml"
+  platforms: "config/platforms.yaml"
+  routing: "config/video_routing.yaml"

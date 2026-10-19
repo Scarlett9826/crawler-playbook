@@ -1,0 +1,35 @@
+# crawler-playbook
+
+> Social-media collection and analysis toolkit. Goal: complete, accurate, fresh
+> data across platforms, then structured labeling and reports.
+
+## Start here
+- AGENTS.md: operating instructions for AI agents (English)
+- README.md: overview and quickstart (Chinese)
+- config/platforms.yaml: platform → adapter → command → auth → output → gotchas
+- config/project.example.yaml: topic, keywords, date window, platform switches, thresholds
+- docs/04-runbook.md: copy-paste commands
+- docs/07-failure-playbook.md: what to do when a crawl breaks
+- docs/05-data-schema.md: normalized / label / showcase / KOL schemas
+
+## Core commands
+- python -m pipeline.collect.media_crawler <platform> search|detail
+- python -m pipeline.collect.x.search
+- python -m pipeline.collect.x.threads
+- python -m pipeline.collect.youtube.run
+- python -m pipeline.collect.weibo.crawl
+- python -m pipeline.collect.wechat.crawl
+- python -m pipeline.normalize
+- python -m pipeline.audit --strict
+- python -m pipeline.label
+- python -m pipeline.analyze.metrics
+- python -m pipeline.analyze.balanced
+- python -m pipeline.video.run --offline
+- python -m pipeline.kol.extract
+- python -m pipeline.kol.aggregate
+
+## Invariants
+- Never commit .env, cookies, browser profiles, raw user data.
+- Anonymize only the configured brand and LLM proxy; keep competitors and platforms.
+- Do not create a showcase unless the video is a self-tested, same-task, multi-model comparison.
+- Run normalize and audit before labeling. Stop if audit fails.

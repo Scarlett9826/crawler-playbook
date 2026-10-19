@@ -1,0 +1,34 @@
+# Canonical model names for cross-video comparison.
+# Aliases are matched case-insensitively; longest alias first.
+
+version: 1
+
+models:
+  - canonical: "Model X Pro"
+    aliases: ["Model X Pro", "Model X-Pro", "ModelX Pro", "X Pro"]
+  - canonical: "Model X Flash"
+    aliases: ["Model X Flash", "Model X-Flash", "ModelX Flash", "X Flash"]
+  - canonical: "Model X"
+    aliases: ["Model X", "ModelX", "Model-X"]
+  - canonical: "DeepSeek"
+    aliases: ["DeepSeek", "Deep Seek", "DS", "深度求索", "梁文谷", "梁文锋"]
+  - canonical: "GLM"
+    aliases: ["GLM", "智谱", "Zhipu"]
+  - canonical: "Qwen"
+    aliases: ["Qwen", "通义", "千问"]
+  - canonical: "Kimi"
+    aliases: ["Kimi", "月之暗面", "Moonshot"]
+  - canonical: "GPT"
+    aliases: ["GPT", "OpenAI", "ChatGPT"]
+  - canonical: "Claude"
+    aliases: ["Claude", "Anthropic"]
+  - canonical: "Gemini"
+    aliases: ["Gemini", "Google"]
+  - canonical: "Grok"
+    aliases: ["Grok", "xAI"]
+  - canonical: "豆包"
+    aliases: ["豆包", "Doubao", "字节"]
+  - canonical: "MiniMax"
+    aliases: ["MiniMax", "海螺"]
+  - canonical: "混元"
+    aliases: ["混元", "Hunyuan", "腾讯"]

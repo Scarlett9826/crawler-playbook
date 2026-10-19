@@ -1,0 +1,57 @@
+# Claim taxonomy used by the labeler and the analysis layer.
+# Replace with your own product's official talking points.
+# Codes are stable; names/keywords are editable.
+
+version: 1
+
+claims:
+  A:
+    name: "榜单 / 第一"
+    desc: "榜单排名、指数、开源第一、国产第一"
+  B:
+    name: "价格 / 性价比"
+    desc: "绝对价格、单位成本、Token Plan、免费额度"
+  C:
+    name: "训练透明"
+    desc: "训练直播、成本公开、失败记录"
+  D:
+    name: "开源"
+    desc: "权重、RL 环境、训练框架、蒸馏模型"
+  E1:
+    name: "多模态能力"
+    desc: "图片、音频、视频、TTS"
+  E2:
+    name: "速度"
+    desc: "UltraSpeed、低延迟、高吞吐"
+  F:
+    name: "RL 规模化"
+    desc: "自我改进、RSI、规模化训练"
+  G:
+    name: "团队 / 人物"
+    desc: "负责人、团队、晋升、人物故事"
+  H:
+    name: "官方客户端"
+    desc: "官方 App / Desktop / 编码工具"
+  I:
+    name: "真实能力"
+    desc: "编程、Agent、工具调用、长任务"
+  J:
+    name: "稳定性"
+    desc: "空转、死循环、删库、退化、路由降级"
+  K:
+    name: "竞品对比"
+    desc: "与 DeepSeek / GLM / Qwen / Kimi / GPT / Claude 等对比"
+
+competitors:
+  - DeepSeek
+  - GLM
+  - Qwen
+  - Kimi
+  - GPT
+  - Claude
+  - Gemini
+  - Grok
+  - 豆包
+  - MiniMax
+  - 混元
+  - Step

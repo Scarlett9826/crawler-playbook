@@ -1,0 +1,55 @@
+# Decision thresholds for video triage.
+# The core rule: not every video has a comparison showcase.
+
+version: 1
+
+triage:
+  require_own_test_for_showcase: true
+  min_models_for_showcase: 2
+  require_same_task: true
+  manual_review_on_uncertain: true
+  manual_review_on_visual_only: true
+
+routes:
+  # self-tested, same task, >=2 models, with numbers
+  head_to_head:
+    route: showcase_extract
+    confidence: high
+  # self-tested, same task, >=2 models, no numbers
+  qualitative_compare:
+    route: showcase_extract
+    confidence: low
+  # one model demo
+  single_model_demo:
+    route: kol_eval_only
+    tag: single_model_demo
+  # same model, different harness/version
+  before_after:
+    route: kol_eval_only
+    tag: usage_evidence
+  # media relay / official benchmark
+  benchmark_relay:
+    route: claims_media
+  # tutorial
+  tutorial:
+    route: exclude
+  # entertainment vs (e.g. AI fighting game)
+  entertainment_vs:
+    route: exclude
+  # promo / affiliate
+  promo:
+    route: kol_eval_only
+    tag: sponsored
+  # no comparison
+  none:
+    route: kol_eval_only
+  # unclear / visual-only
+  uncertain:
+    route: manual_review
+
+evidence:
+  explicit_number_weight: 1.0
+  vague_claim_weight: 0.4
+  sponsored_weight: 0.3
+  independent_weight: 1.0
+  semi_weight: 0.7

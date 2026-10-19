@@ -1,0 +1,32 @@
+# Known KOLs / reviewers, used to unify video and text identities.
+# Handles are matched case-insensitively against author / channel names.
+#
+# independence:
+#   independent  self-funded, public method, reproducible
+#   semi         API/credits provided by vendor or viewers
+#   sponsored    paid promotion, affiliate, invite codes
+#   unknown      no signal
+
+version: 1
+
+kols:
+  - id: kol_001
+    name: "示例评测者"
+    handles:
+      bilibili: "example_bili"
+      youtube: "ExampleChannel"
+      x: "example_x"
+      douyin: "example_douyin"
+    independence: independent
+    notes: "公开测试题，自购 API"
+
+  - id: kol_002
+    name: "示例合作博主"
+    handles:
+      douyin: "example_partner"
+    independence: sponsored
+    notes: "视频含邀请码"
+
+# Authors with >= this many kol-labelled posts are listed as candidates,
+# but are NOT auto-trusted.
+candidate_threshold: 3

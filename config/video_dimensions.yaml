@@ -1,0 +1,19 @@
+# Shared dimension taxonomy for video and text KOL evaluation.
+# Keep keys stable; labels are for display.
+
+version: 1
+
+dimensions:
+  coding: "编程 / 代码"
+  agent: "Agent / 工具调用"
+  reasoning: "推理 / 数学"
+  speed: "速度 / 延迟"
+  price: "价格 / 成本"
+  stability: "稳定性"
+  long_context: "长上下文"
+  multimodal: "多模态"
+  instruction: "指令遵循"
+  harness: "生态 / 客户端 / Harness"
+  design: "前端 / 设计 / 审美"
+  safety: "审核 / 安全"
+  openness: "开源 / 许可"

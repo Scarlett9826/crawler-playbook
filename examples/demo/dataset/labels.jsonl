@@ -1,0 +1,49 @@
+{"key": "xiaohongshu|post|p000|价格真香，同样的任务成本只有竞品的一半", "rel": 1, "sent": "pos", "src": "kol", "claims": ["B"], "stance": {"B": "buy"}, "topics": ["价格便宜"], "comp": ["DeepSeek"], "quote": "价格真香，同样的任务成本只有竞品的一半"}
+{"key": "xiaohongshu|comment|c0000|同意", "rel": 1, "sent": "neu", "src": "user", "claims": [], "stance": {}, "topics": [], "comp": [], "quote": "同意"}
+{"key": "xiaohongshu|comment|c0001|不同意，实际体验更差", "rel": 1, "sent": "neg", "src": "user", "claims": [], "stance": {}, "topics": [], "comp": [], "quote": "不同意，实际体验更差"}
+{"key": "xiaohongshu|comment|c0002|价格确实便宜", "rel": 1, "sent": "pos", "src": "user", "claims": [], "stance": {}, "topics": [], "comp": [], "quote": "价格确实便宜"}
+{"key": "douyin|post|p001|便宜是真的，但思考时间太长了，十几分钟才出结果", "rel": 1, "sent": "mix", "src": "user", "claims": ["B", "E2"], "stance": {"B": "buy", "E2": "reject"}, "topics": ["思考过长"], "comp": [], "quote": "便宜是真的，但思考时间太长了，十几分钟才出结果"}
+{"key": "douyin|comment|c0010|同意", "rel": 1, "sent": "neu", "src": "user", "claims": [], "stance": {}, "topics": [], "comp": [], "quote": "同意"}
+{"key": "douyin|comment|c0011|不同意，实际体验更差", "rel": 1, "sent": "neg", "src": "user", "claims": [], "stance": {}, "topics": [], "comp": [], "quote": "不同意，实际体验更差"}
+{"key": "douyin|comment|c0012|价格确实便宜", "rel": 1, "sent": "pos", "src": "user", "claims": [], "stance": {}, "topics": [], "comp": [], "quote": "价格确实便宜"}
+{"key": "bilibili|post|p002|榜单分数涨得太快，实际用起来完全不是这个水平", "rel": 1, "sent": "neg", "src": "user", "claims": ["A", "I"], "stance": {"A": "reject", "I": "reject"}, "topics": ["刷分质疑"], "comp": [], "quote": "榜单分数涨得太快，实际用起来完全不是这个水平"}
+{"key": "bilibili|comment|c0020|同意", "rel": 1, "sent": "neu", "src": "user", "claims": [], "stance": {}, "topics": [], "comp": [], "quote": "同意"}
+{"key": "bilibili|comment|c0021|不同意，实际体验更差", "rel": 1, "sent": "neg", "src": "user", "claims": [], "stance": {}, "topics": [], "comp": [], "quote": "不同意，实际体验更差"}
+{"key": "bilibili|comment|c0022|价格确实便宜", "rel": 1, "sent": "pos", "src": "user", "claims": [], "stance": {}, "topics": [], "comp": [], "quote": "价格确实便宜"}
+{"key": "zhihu|post|p003|开源权重和训练框架都放了，这点很有诚意", "rel": 1, "sent": "pos", "src": "user", "claims": ["D"], "stance": {"D": "buy"}, "topics": ["开源诚意"], "comp": [], "quote": "开源权重和训练框架都放了，这点很有诚意"}
+{"key": "zhihu|comment|c0030|同意", "rel": 1, "sent": "neu", "src": "user", "claims": [], "stance": {}, "topics": [], "comp": [], "quote": "同意"}
+{"key": "zhihu|comment|c0031|不同意，实际体验更差", "rel": 1, "sent": "neg", "src": "user", "claims": [], "stance": {}, "topics": [], "comp": [], "quote": "不同意，实际体验更差"}
+{"key": "zhihu|comment|c0032|价格确实便宜", "rel": 1, "sent": "pos", "src": "user", "claims": [], "stance": {}, "topics": [], "comp": [], "quote": "价格确实便宜"}
+{"key": "weibo|post|p004|空转五个小时没有产出，最后还把目录删了", "rel": 1, "sent": "neg", "src": "kol", "claims": ["J"], "stance": {"J": "reject"}, "topics": ["稳定性"], "comp": [], "quote": "空转五个小时没有产出，最后还把目录删了"}
+{"key": "weibo|comment|c0040|同意", "rel": 1, "sent": "neu", "src": "user", "claims": [], "stance": {}, "topics": [], "comp": [], "quote": "同意"}
+{"key": "weibo|comment|c0041|不同意，实际体验更差", "rel": 1, "sent": "neg", "src": "user", "claims": [], "stance": {}, "topics": [], "comp": [], "quote": "不同意，实际体验更差"}
+{"key": "weibo|comment|c0042|价格确实便宜", "rel": 1, "sent": "pos", "src": "user", "claims": [], "stance": {}, "topics": [], "comp": [], "quote": "价格确实便宜"}
+{"key": "wechat|post|p005|编程任务完成度不错，复杂项目也能跑通", "rel": 1, "sent": "pos", "src": "user", "claims": ["I"], "stance": {"I": "buy"}, "topics": ["编程好用"], "comp": [], "quote": "编程任务完成度不错，复杂项目也能跑通"}
+{"key": "x|post|p006|营销味太重，到处都是邀请码", "rel": 1, "sent": "neg", "src": "user", "claims": ["G"], "stance": {"G": "reject"}, "topics": ["营销质疑"], "comp": [], "quote": "营销味太重，到处都是邀请码"}
+{"key": "x|comment|c0060|同意", "rel": 1, "sent": "neu", "src": "user", "claims": [], "stance": {}, "topics": [], "comp": [], "quote": "同意"}
+{"key": "x|comment|c0061|不同意，实际体验更差", "rel": 1, "sent": "neg", "src": "user", "claims": [], "stance": {}, "topics": [], "comp": [], "quote": "不同意，实际体验更差"}
+{"key": "x|comment|c0062|价格确实便宜", "rel": 1, "sent": "pos", "src": "user", "claims": [], "stance": {}, "topics": [], "comp": [], "quote": "价格确实便宜"}
+{"key": "xiaohongshu|post|p007|和竞品比还是差一档，复杂任务容易跑偏", "rel": 1, "sent": "neg", "src": "user", "claims": ["K", "I"], "stance": {"K": "reject", "I": "reject"}, "topics": ["不如竞品"], "comp": ["GLM"], "quote": "和竞品比还是差一档，复杂任务容易跑偏"}
+{"key": "xiaohongshu|comment|c0070|同意", "rel": 1, "sent": "neu", "src": "user", "claims": [], "stance": {}, "topics": [], "comp": [], "quote": "同意"}
+{"key": "xiaohongshu|comment|c0071|不同意，实际体验更差", "rel": 1, "sent": "neg", "src": "user", "claims": [], "stance": {}, "topics": [], "comp": [], "quote": "不同意，实际体验更差"}
+{"key": "xiaohongshu|comment|c0072|价格确实便宜", "rel": 1, "sent": "pos", "src": "user", "claims": [], "stance": {}, "topics": [], "comp": [], "quote": "价格确实便宜"}
+{"key": "douyin|post|p008|换了一个客户端之后效果明显变好", "rel": 1, "sent": "pos", "src": "kol", "claims": ["H", "I"], "stance": {"H": "reject", "I": "buy"}, "topics": ["客户端"], "comp": [], "quote": "换了一个客户端之后效果明显变好"}
+{"key": "douyin|comment|c0080|同意", "rel": 1, "sent": "neu", "src": "user", "claims": [], "stance": {}, "topics": [], "comp": [], "quote": "同意"}
+{"key": "douyin|comment|c0081|不同意，实际体验更差", "rel": 1, "sent": "neg", "src": "user", "claims": [], "stance": {}, "topics": [], "comp": [], "quote": "不同意，实际体验更差"}
+{"key": "douyin|comment|c0082|价格确实便宜", "rel": 1, "sent": "pos", "src": "user", "claims": [], "stance": {}, "topics": [], "comp": [], "quote": "价格确实便宜"}
+{"key": "bilibili|post|p009|长上下文下质量下降明显，越聊越乱", "rel": 1, "sent": "neg", "src": "user", "claims": ["J"], "stance": {"J": "reject"}, "topics": ["长上下文"], "comp": [], "quote": "长上下文下质量下降明显，越聊越乱"}
+{"key": "bilibili|comment|c0090|同意", "rel": 1, "sent": "neu", "src": "user", "claims": [], "stance": {}, "topics": [], "comp": [], "quote": "同意"}
+{"key": "bilibili|comment|c0091|不同意，实际体验更差", "rel": 1, "sent": "neg", "src": "user", "claims": [], "stance": {}, "topics": [], "comp": [], "quote": "不同意，实际体验更差"}
+{"key": "bilibili|comment|c0092|价格确实便宜", "rel": 1, "sent": "pos", "src": "user", "claims": [], "stance": {}, "topics": [], "comp": [], "quote": "价格确实便宜"}
+{"key": "zhihu|post|p010|多模态识别图片还行，速度也快", "rel": 1, "sent": "pos", "src": "user", "claims": ["E1", "E2"], "stance": {"E1": "buy", "E2": "buy"}, "topics": ["多模态"], "comp": [], "quote": "多模态识别图片还行，速度也快"}
+{"key": "zhihu|comment|c0100|同意", "rel": 1, "sent": "neu", "src": "user", "claims": [], "stance": {}, "topics": [], "comp": [], "quote": "同意"}
+{"key": "zhihu|comment|c0101|不同意，实际体验更差", "rel": 1, "sent": "neg", "src": "user", "claims": [], "stance": {}, "topics": [], "comp": [], "quote": "不同意，实际体验更差"}
+{"key": "zhihu|comment|c0102|价格确实便宜", "rel": 1, "sent": "pos", "src": "user", "claims": [], "stance": {}, "topics": [], "comp": [], "quote": "价格确实便宜"}
+{"key": "weibo|post|p011|思考链很长，但结论经常是错的", "rel": 1, "sent": "neg", "src": "user", "claims": ["E2", "I"], "stance": {"E2": "reject", "I": "reject"}, "topics": ["思考过长"], "comp": [], "quote": "思考链很长，但结论经常是错的"}
+{"key": "weibo|comment|c0110|同意", "rel": 1, "sent": "neu", "src": "user", "claims": [], "stance": {}, "topics": [], "comp": [], "quote": "同意"}
+{"key": "weibo|comment|c0111|不同意，实际体验更差", "rel": 1, "sent": "neg", "src": "user", "claims": [], "stance": {}, "topics": [], "comp": [], "quote": "不同意，实际体验更差"}
+{"key": "weibo|comment|c0112|价格确实便宜", "rel": 1, "sent": "pos", "src": "user", "claims": [], "stance": {}, "topics": [], "comp": [], "quote": "价格确实便宜"}
+{"key": "youtube|video|v_head|", "rel": 1, "sent": "neu", "src": "kol", "claims": [], "stance": {}, "topics": [], "comp": [], "quote": ""}
+{"key": "youtube|video|v_single|", "rel": 1, "sent": "neu", "src": "kol", "claims": [], "stance": {}, "topics": [], "comp": [], "quote": ""}
+{"key": "youtube|video|v_relay|", "rel": 1, "sent": "neu", "src": "kol", "claims": [], "stance": {}, "topics": [], "comp": [], "quote": ""}
+{"key": "youtube|video|v_uncertain|", "rel": 1, "sent": "neu", "src": "kol", "claims": [], "stance": {}, "topics": [], "comp": [], "quote": ""}

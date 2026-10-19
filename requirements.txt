@@ -1,0 +1,8 @@
+PyYAML>=6.0
+requests>=2.31
+playwright>=1.40
+yt-dlp>=2025.1.1
+youtube-transcript-api>=1.0
+youtube-comment-downloader>=0.1.80
+faster-whisper>=1.0
+markdown>=3.5
